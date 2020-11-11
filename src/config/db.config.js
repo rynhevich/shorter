@@ -1,0 +1,1 @@
+export default { link: 'mongodb+srv://user:user123456@cluster.gdc8l.mongodb.net/shorter?retryWrites=true&w=majority' }

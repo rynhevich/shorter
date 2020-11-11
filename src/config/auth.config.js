@@ -1,0 +1,1 @@
+export default { secret: 'dont-tell-enybody' };
