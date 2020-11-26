@@ -1,11 +1,11 @@
 import jwt from 'jsonwebtoken';
 import config from '../config/auth.config.js';
-import db from './models/index.js';
+import db from '../models/index.js';
 
 const User = db.user;
 
 export const verifyToken = (req, res, next) => {
-    let token = req.headers['x-access-token'];
+    let token = req.body.headers['x-access-token'];
 
     if (!token) {
         return res.status(403).json({ message: 'No token provided!' });

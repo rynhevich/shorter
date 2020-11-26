@@ -13,7 +13,7 @@ export const signup = (req, res) => {
 
     user.save((err, user) => {
         if (err) {
-            res.starus(500).json({ message: err });
+            res.status(500).json({ message: err });
             return;
         }
 
@@ -45,7 +45,7 @@ export const signin = (req, res) => {
             });
         }
 
-        const token = jwt.sign({ id: user.id }, config.secret, { expiresIn: 1800 }, (err, token) => {
+        const token = jwt.sign({ id: user.id }, config.secret, (err, token) => {
             res.status(200).json({
                 id: user._id,
                 username: user.username,
