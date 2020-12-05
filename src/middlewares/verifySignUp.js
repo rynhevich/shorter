@@ -14,6 +14,5 @@ export const checkDuplicateUsername = (req, res, next) => {
                 return;
             }
             next();
-
         })
 };

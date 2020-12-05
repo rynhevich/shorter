@@ -4,7 +4,6 @@ import linkRouter from './link.router.js'
 
 const router = express.Router();
 
-
 router.use(authRouter);
 router.use(linkRouter);
 

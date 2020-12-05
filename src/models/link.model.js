@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 const Link = mongoose.model(
-  "Link",
+  'Link',
   new mongoose.Schema({
     id: { 
       type: String, 
@@ -17,7 +17,7 @@ const Link = mongoose.model(
       required: true
     },
     description: String,
-    tags: String,
+    tags: Array,
     counter: Number
   }),
   'links'
